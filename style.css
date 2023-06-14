@@ -108,17 +108,35 @@ a .fab {
   padding-left: 1em;
 }
 
-.skills .column {
-  -ms-flex: 0 0 50%;
-  flex: 0 0 50%;
-  max-width: 50%;
+.experience, .skills {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
-.skills .column ul, ul.Certificate-description {
+.experience .title {
+  color: #509e98;
+  -ms-flex: 0 0 33.3%;
+  flex: 0 0 33.3%;
+  max-width: 33%;
+}
+
+.experience .descrition {
+  -ms-flex: 0 0 66.6%;
+  flex: 0 0 66.6%;
+  max-width: 66.6%;
+}
+
+.experience .descrition p {
+  padding-left: 1em;
+}
+
+ul.skills , ul.Certificate-description, ul.Experience-description {
   list-style-type: none;
 }
 
-.skills .column ul > li:before {
+ul.skills > li:before {
   content: "►";
   padding-right: 0.5em;
   color: #509e98;
@@ -126,6 +144,12 @@ a .fab {
 
 
 ul.Certificate-description li:before{
+  content: "✔";
+  padding-right: 0.5em;
+  color: #509e98;
+}
+
+ul.Experience-description li:before{
   content: "✔";
   padding-right: 0.5em;
   color: #509e98;
